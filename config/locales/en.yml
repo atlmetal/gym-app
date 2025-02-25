@@ -28,4 +28,8 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      subscription:
+        errors:
+          end_date_after_start_date: 'End date must be after start date'
