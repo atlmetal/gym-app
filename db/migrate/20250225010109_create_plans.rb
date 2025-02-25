@@ -5,7 +5,7 @@ class CreatePlans < ActiveRecord::Migration[7.1]
       t.integer :plan_type
       t.integer :duration_days
       t.integer :access_limit
-      t.references :gym, null: false, foreign_key: true
+      t.references :fitness_center, null: false, foreign_key: true
 
       t.timestamps
     end
