@@ -1,0 +1,17 @@
+<h1>Gym Check-In</h1>
+
+<%= form_with url: checkins_path, local: true do |form| %>
+  <div>
+    <%= form.label :user_id, "Enter your User ID:" %>
+    <%= form.text_field :user_id %>
+  </div>
+  <div>
+    <%= form.submit "Check In" %>
+  </div>
+<% end %>
+
+<% if flash[:notice] %>
+  <p style="color: green;"><%= flash[:notice] %></p>
+<% elsif flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>
